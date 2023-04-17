@@ -16,23 +16,33 @@ html {
   overflow-x: hidden;
 }
 .togglebar {
-  display: flex;
+
   justify-content: flex-end;
   position:absolute;
   z-index: 11;
   right: 10px;top: 10px;
+  cursor: pointer;
+  
 }
-input[type="checkbox"]:checked{
-  transform: rotate(180deg);
+label i.fa-times{
+  display: none;
 }
 
-input[type="checkbox"]:checked::before{
-  content: "\f007";
+input[type="checkbox"]:checked~label i.fa-times{
+  display: none;
+}
+
+input[type="checkbox"]:checked~label i.fa-times{
+  display: flex;
  
-  transition: .2s linear .2s;
-
 }
-
+ 
+input[type="checkbox"]:checked~label i.fa-bars{
+  display: none;
+}
+input[type="checkbox"]:checked ~ .navbar {
+  display: none;
+}
 #checkbox-menu {
   display: none;
 }
@@ -58,9 +68,7 @@ input[type="checkbox"]:checked::before{
 z-index: 2;
 }
 
-input[type="checkbox"]:checked ~ .navbar {
-  display: none;
-}
+
 .background-image{
   background: url(../project-3/img/img0.jpg)no-repeat;
   height: 100%;
