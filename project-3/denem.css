@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+.togglebar {
+  display: flex;
+  justify-content: flex-end;
+  position:absolute;
+  z-index: 11;
+  right: 10px;top: 10px;
+}
+input[type="checkbox"]:checked{
+  transform: rotate(180deg);
+}
+
+input[type="checkbox"]:checked::before{
+  content: "\f007";
+ 
+  transition: .2s linear .2s;
+
+}
+
+#checkbox-menu {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position:fixed;
+  z-index: 10;
+  padding: 0 10%;
+  height: 100%;
+  width: 100%;
+  
+  
+}
+.navbar a{
+  position: relative;
+  font-size: 4rem;
+  font-weight: bolder;
+ color: transparent;
+-webkit-text-stroke: .5px black;
+z-index: 2;
+}
+
+input[type="checkbox"]:checked ~ .navbar {
+  display: none;
+}
+.background-image{
+  background: url(../project-3/img/img0.jpg)no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+
+  background-position: center center;
+  left: 0; top: 0;
+}
+.navbar a:hover:nth-child(2) ~.background-image{
+  background: url(../project-3/img/img2.jpg)no-repeat;
+  background-size:cover ;
+  background-position: center center;
+}
+.navbar a:hover:nth-child(3) ~.background-image{
+  background: url(../project-3/img/img3.jpg)no-repeat;
+  background-size:cover ;
+  background-position: center center;
+}
+.navbar a:hover:nth-child(4) ~.background-image{
+  background: url(../project-3/img/img4.jpg)no-repeat;
+  background-size:cover ;
+  background-position: center center;
+}
+.navbar a:hover:nth-child(5) ~.background-image{
+  background: url(../project-3/img/img5.jpg)no-repeat;
+  background-size:cover ;
+  background-position: center center;
+}
