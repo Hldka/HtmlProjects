@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+   background: tomato;
+   height: 100%;
+   width: 250px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   border-right: 2px solid;
+   transform:scaleX(0) ;
+   -webkit-transform:scaleX(0) ;
+   -moz-transform:scaleX(0) ;
+   -ms-transform:scaleX(0) ;
+   -o-transform:scaleX(0) ;
+   transform-origin: left;
+   transition: transform .3s;
+   -webkit-transition: transform .3s;
+   -moz-transition: transform .3s;
+   -ms-transition: transform .3s;
+   -o-transition: transform .3s;
+}
+ul li{
+    list-style: none;
+    color: white;
+    padding: 20px 0px 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+ul li:hover{
+    background: white;
+    color: tomato;
+}
+.content{
+    padding: 20px;
+    line-height: 25px;
+
+}
+input[type="checkbox"]{
+    display: none;
+}
+label .one{
+    height: 8px;
+    width: 40px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+label .two{
+    height: 8px;
+    width: 40px;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+label .three{
+    height: 8px;
+    width: 40px;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    border: 2px solid tomato;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+#menu-button:checked ~ ul{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+#menu-button:checked ~ label .one{
+    transform: rotateZ(45deg) scaleX(.5)translateX(15px);
+    -webkit-transform: rotateZ(45deg) scaleX(.5)translateX(15px);
+    -moz-transform: rotateZ(45deg) scaleX(.5)translateX(15px);
+    -ms-transform: rotateZ(45deg) scaleX(.5)translateX(15px);
+    -o-transform: rotateZ(45deg) scaleX(.5)translateX(15px);
+}
+#menu-button:checked ~ label > .two{
+    transform: translate(-7px,0px);
+    -webkit-transform: translate(-7px,0px);
+    -moz-transform: translate(-7px,0px);
+    -ms-transform: translate(-7px,0px);
+    -o-transform: translate(-7px,0px);
+    background: white;
+    z-index: 1;
+}
+#menu-button:checked ~ label > .three{
+    transform: rotateZ(-45deg) scaleX(.5) translate(12px,0px);
+    -webkit-transform: rotateZ(-45deg) scaleX(.5) translate(12px,0px);
+    -moz-transform: rotateZ(-45deg) scaleX(.5) translate(12px,0px);
+    -ms-transform: rotateZ(-45deg) scaleX(.5) translate(12px,0px);
+    -o-transform: rotateZ(-45deg) scaleX(.5) translate(12px,0px);
+}
+.content h3{
+    text-transform: capitalize;
+}
