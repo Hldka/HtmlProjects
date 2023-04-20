@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-border-box;
+
+}
+body{
+    background-image: url(/project-10/images-3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.navbar{
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 80px;
+
+}
+.navbar ul{
+height: 100%;
+width: 100%;
+background-color: #1a1a1a;
+display: flex;
+align-items: center;
+flex-flow: column wrap;
+padding-top: 150px;
+list-style-type:none;
+}
+.navbar ul li{
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+    text-align: center;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration:none;
+    color: #ccc;
+    font-size: 30px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: .2s ease-out;
+    -webkit-transition: .2s ease-out;
+    -moz-transition: .2s ease-out;
+    -ms-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+}
+.navbar ul li:hover > a {
+    color: #ff471a;
+}
+.navbar ul li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    box-shadow: 0 0 7px #000 inset;
+    border-radius:50px ;
+    -webkit-border-radius:50px ;
+    -moz-border-radius:50px ;
+    -ms-border-radius:50px ;
+    -o-border-radius:50px ;
+   
+}
+.navbar ul li a:after{
+  content: attr(data-text);
+  position: absolute;
+  left: 80px;
+  top: -10px;
+  background: #333;
+  color: #fff;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  padding: 5px 15px;
+  font-family: arial;
+  font-weight:normal ;
+  display: none;
+}
+.navbar ul li:after{
+    content:'';
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: -30px;
+    top: 13px;
+    background: #333;
+    transform:rotateZ(45deg) ;
+    -webkit-transform:rotateZ(45deg) ;
+    -moz-transform:rotateZ(45deg) ;
+    -ms-transform:rotateZ(45deg) ;
+    -o-transform:rotateZ(45deg) ;
+}
+.navbar ul li:hover:after{
+    display: block;
+}
+.navbar ul li:hover a:after{
+    display: block;
+}
+@media (max-width:550px) {
+    .navbar{
+        height: 60px;
+        width: 100%;
+        top: 572px;
+
+
+    }
+    .navbar ul {
+        height:70px;
+        width: 100%;
+        padding: 0;
+
+    }
+    .navbar ul li a:after{
+        top: -75px; left: -8px;
+    }
+    .navbar ul li:after {
+        top: -25px; left: 20px;
+
+    }
+    .navbar ul li:nth-child(5) a:after{
+        left: -70px;
+    }
+}
